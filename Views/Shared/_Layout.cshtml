@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    
+    <link href="~/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" asp-action="index" asp-controller="Home">Blog</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a asp-action="index" asp-controller="Home">Home</a></li>
+                <li><a asp-action="Index" asp-controller="About">About</a></li>
+            </ul>
+            @await Html.PartialAsync("_LoginPartial")
+        </div>
+    </nav>
+    <div class="row">
+
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+            
+            @if (User.Identity.IsAuthenticated)
+            {
+            <a asp-action="Create" asp-controller="Home"><button class="btn-block btn-primary">New Blog</button></a>
+            }
+            <br />
+            @RenderBody()
+        </div>
+        <div class="col-md-3">
+        
+        </div>
+        </div>
+    <footer>
+        <hr />
+        &nbsp &nbsp &nbsp copyrights pape 2018
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

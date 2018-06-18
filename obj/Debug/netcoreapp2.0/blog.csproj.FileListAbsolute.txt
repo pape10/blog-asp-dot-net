@@ -1,0 +1,12 @@
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\blog.csprojAssemblyReference.cache
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\blog.csproj.CoreCompileInputs.cache
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\blog.AssemblyInfoInputs.cache
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\blog.AssemblyInfo.cs
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\bin\Debug\netcoreapp2.0\blog.deps.json
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\bin\Debug\netcoreapp2.0\blog.runtimeconfig.json
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\bin\Debug\netcoreapp2.0\blog.runtimeconfig.dev.json
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\bin\Debug\netcoreapp2.0\blog.dll
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\bin\Debug\netcoreapp2.0\blog.pdb
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\blog.dll
+C:\Users\Pradeepta_Ranjan_Cho\Desktop\blog\blog\obj\Debug\netcoreapp2.0\blog.pdb

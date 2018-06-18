@@ -1,0 +1,37 @@
+﻿@using System.Text.RegularExpressions;
+<html xmlns="http://www.w3.org/1999/xhtml">
+@{
+    ViewBag.Title = "Home";
+}
+<div>
+    <div class="panel-group">
+        @foreach (var blog in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading"><a asp-action="Detail" asp-controller="Home" asp-route-id="@blog.Id">@blog.Name</a></div>
+                <div class="panel-body">
+                    @if (blog.Details.Length > 5)
+                    {
+                        @Regex.Replace(blog.Details, @"<[^>]+>", "").Substring(0,5)
+                        <a asp-action="Detail" asp-controller="Home" asp-route-id="@blog.Id">..read more</a>
+                    }
+                    @if (blog.Details.Length < 5)
+                    {
+                        @blog.Details
+                    }
+
+                </div>
+                <div class="panel-footer">
+                    Autor : @blog.Author
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a style="float:right" asp-action="Edit" asp-controller="Home" asp-route-id="@blog.Id"><button class="btn-info">EDIT</button></a>
+
+                        <a style="float:right" asp-action="Delete" asp-controller="Home" asp-route-id="@blog.Id"><button class="btn-danger">DELETE</button></a>
+                    }
+                </div>
+            </div>
+            <hr />
+        }
+    </div>
+</div>

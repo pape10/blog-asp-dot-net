@@ -1,0 +1,39 @@
+﻿@model blog.Models.Blog
+@{
+    ViewBag.Title = "Create New Blog";
+}
+<center><h1>Create New Blog</h1></center>
+<form method="post" enctype="multipart/form-data">
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Details"></label>
+        <br />
+        <textarea asp-for="Details" rows="5" cols="40"></textarea>
+        <span asp-validation-for="Details"></span>
+    </div>
+    <br />
+    <div>
+        <label asp-for="Author"></label>
+        <input asp-for="Author" />
+        <span asp-validation-for="Author"></span>
+    </div>
+    <div>
+        <label asp-for="Image"></label>
+        <input asp-for="Image" type="file" />
+        <span asp-validation-for="Image"></span>
+    </div>
+    <input type="submit" name="save" value="save" />
+
+</form>
+@section scripts{
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#Details'
+        });</script>
+}

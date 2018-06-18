@@ -1,0 +1,42 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+@{
+    ViewBag.Title = "Detail";
+}
+<div>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Model.Name</div>
+            <div class="panel-body">
+                @if (Model.Image != null)
+                {
+                    <img style="width:100%;height:100%" src="~/uploads/img/@Model.Image" />
+                }
+                    <p> @Html.Raw(@Model.Details)</p>
+            </div>
+            <div class="panel-footer">
+                Autor : @Model.Author
+            </div>
+        </div>
+        <hr />
+    </div>
+    <hr />
+    <h4>Comments:</h4>
+    <hr />
+    <form action="/Comment/Create/@Model.Id" method="post">
+        <label for="Name">Name:</label>
+        <input type="text" name="Name" value="" />
+        @Html.ValidationMessage("Name")
+        <label for="Com">Comment:</label>
+        <input type="text" name="Com" value="" />
+        @Html.ValidationMessage("Com")
+        @Html.AntiForgeryToken()
+        <input type="submit" name="Done" value="post" />
+    </form>
+    @if (Model.Comments != null)
+    {
+        @foreach (var comment in Model.Comments)
+        {
+            <div><b>@comment.Name</b> : @comment.Com</div>
+        }
+    }
+</div>
